@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
@@ -11,34 +12,146 @@
 
 <body>
 
-    <!-- navbar -->
-    <nav class="w-full h-[100px] px-4 lg:px-[76px] bg-white border-b flex justify-end items-center relative">
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="header__nav" aria-label="Primary navigation">
 
-        <!-- logo -->
-        <img src="./images/logo/logo.webp" alt="logo"
-            class="h-[94px] w-[94px] lg:w-[201px] lg:h-[157px] absolute left-4 lg:left-[76px] top-[3px]">
+            <a href="/" class="header__logo-link" aria-label="Homepage">
+                <img src="./images/logo/logo.webp" alt="Premier Schools Exhibition Logo" class="header__logo">
+            </a>
 
-        <button
-            class="w-[180px] lg:w-[205px] h-[60px] border-[2px] border-[#101145] rounded-[4px] overflow-hidden flex">
-            <!-- icon -->
-            <div class="h-[60px] w-[60px] bg-linear-to-r from-[#000E38] to-[#3F186A]">
+            <a href="#register" class="header__register-btn">
+                <span class="header__register-icon" aria-hidden="true">
+                    <i class="bi bi-arrow-up-right"></i>
+                </span>
 
-            </div>
-
-            <div class="w-[145px] h-[60px] flex justify-center items-center">
-                <span class="text-[16px] font-[700] text-[#101145]">
+                <span class="header__register-text">
                     Register Now
                 </span>
-            </div>
+            </a>
 
-        </button>
-
-    </nav>
+        </nav>
+    </header>
+    <!-- /Navbar -->
 
     <!-- landing page -->
-    <section class="w-full h-[720px] bg-linear-to-r from-[#000E38] to-[#3F186A]">
+    <section class="hidden md:block w-full h-[720px] bg-linear-to-r from-[#000E38] to-[#3F186A]">
+    </section>
+
+    <!-- Mobile Hero Section -->
+    <section class="hero hero--mobile" aria-labelledby="hero-mobile-title">
+
+        <div class="hero__mobile-banner">
+
+            <!-- Hero Visuals -->
+            <div class="mobile-gallery">
+                <div class="mobile-gallery-track">
+
+                    <img src="./images/childrens/children1.webp" alt="girl reading book" class="hero__mobile-image">
+
+                    <img src="./images/childrens/children2.webp" alt="girls going to school"
+                        class="hero__mobile-image hero__mobile-image--offset">
+
+                    <img src="./images/childrens/children3.webp" alt="boy playing with football"
+                        class="hero__mobile-image">
+
+                    <img src="./images/childrens/children4.webp" alt="girl with school bag"
+                        class="hero__mobile-image hero__mobile-image--offset">
+
+                    <img src="./images/childrens/children5.webp" alt="girl playing" class="hero__mobile-image">
+
+                    <img src="./images/childrens/children6.webp" alt="girl playing golf"
+                        class="hero__mobile-image hero__mobile-image--offset">
+
+                    <img src="./images/childrens/children7.webp" alt="girl studying" class="hero__mobile-image">
+
+                    <img src="./images/childrens/children8.webp" alt="girl with book in hand"
+                        class="hero__mobile-image hero__mobile-image--offset">
+
+                    <img src="./images/childrens/children9.webp" alt="girl with bicycle" class="hero__mobile-image">
+
+                    <img src="./images/childrens/children10.webp" alt="girl running"
+                        class="hero__mobile-image hero__mobile-image--offset">
+
+                    <img src="./images/childrens/children11.webp" alt="boy playing with bat" class="hero__mobile-image">
+
+                    <img src="./images/childrens/children12.webp" alt="Children learning together."
+                        class="hero__mobile-image hero__mobile-image--offset">
+
+                </div>
+            </div>
+
+            <!-- Title -->
+            <header class="hero__mobile-header">
+
+                <h1 id="hero-mobile-title" class="hero__mobile-title">
+                    Discover Gurugram's <br>
+                    <span class="hero__mobile-title-highlight">
+                        Top 30+ Schools
+                    </span>
+                </h1>
+
+                <p class="hero__mobile-subtitle">
+                    All In One Place
+                </p>
+
+            </header>
+
+            <!-- Bottom Curve -->
+            <svg class="hero__mobile-curve" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+
+                <path fill="#ffffff" d="M0,80 C360,0 1080,0 1440,80 L1440,120 L0,120 Z">
+                </path>
+
+            </svg>
+
+        </div>
+
+        <!-- Venue Details -->
+        <section class="hero__mobile-schedule" aria-label="Event details">
+
+            <div class="hero__mobile-schedule-card">
+
+                <div class="hero__mobile-schedule-inner">
+
+                    <article class="hero__mobile-schedule-item">
+
+                        <div>
+
+                            <h2 class="hero__venue">
+                                Apparel House
+                            </h2>
+
+                            <p class="hero__location">
+                                Sec 44, Gurugram
+                            </p>
+
+                        </div>
+
+                        <div class="hero__divider" aria-hidden="true"></div>
+
+                        <div>
+
+                            <h2 class="hero__date">
+                                2–3 August 2025
+                            </h2>
+
+                            <p class="hero__time">
+                                Sat–Sun | 10 AM – 6 PM
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
 
     </section>
+    <!-- /Mobile Hero Section -->
 
     <!-- awards -->
     <section class="w-full h-auto px-4 py-[30px] lg:py-[60px] flex justify-center items-center">

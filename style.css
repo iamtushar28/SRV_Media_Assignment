@@ -1,1 +1,289 @@
 
+/* ==========================
+   Header
+========================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+}
+
+
+/* ==========================
+   Navigation
+========================== */
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 60px;
+    padding: 0 0.5rem;
+}
+
+
+/* ==========================
+   Logo
+========================== */
+
+.header__logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    display: block;
+
+    height: 80px;
+    width: auto;
+
+    margin-bottom: -1.5rem;
+}
+
+/* ==========================
+   Register Button
+========================== */
+
+.header__register-btn {
+    display: inline-flex;
+    align-items: center;
+
+    height: 40px;
+
+    border: 2px solid #000e38;
+    border-radius: 4px;
+
+    text-decoration: none;
+    overflow: hidden;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.header__register-btn:focus-visible {
+    outline: 3px solid #0d6efd;
+    outline-offset: 3px;
+}
+
+.header__register-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    color: #ffffff;
+
+    background: linear-gradient(90deg, #000e38, #3f186a);
+}
+
+.header__register-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 0.75rem;
+
+    color: #030e3b;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* ==========================
+   Desktop
+========================== */
+
+@media (min-width: 992px) {
+
+    .header__nav {
+        height: 100px;
+        padding: 0 60px;
+    }
+
+     .header__logo {
+        height: 157px;
+        width: auto;
+
+        margin-bottom: -5rem;
+    }
+
+    .header__register-btn {
+        height: 60px;
+    }
+
+    .header__register-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.125rem;
+    }
+
+    .header__register-text {
+        width: 145px;
+        font-size: 0.875rem;
+    }
+
+}
+
+
+/* ==========================
+   Mobile Hero
+========================== */
+
+.hero--mobile {
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .hero--mobile {
+        display: none;
+    }
+}
+
+.hero__mobile-banner {
+    position: relative;
+
+    height: fit-content;
+    width: 100%;
+    margin-top: 60px;
+    padding-bottom: 5rem;
+
+    overflow: hidden;
+
+    background: linear-gradient(to bottom, #3F186A, #000E38);
+}
+
+.hero__mobile-image {
+    width: 120px;
+    height: 221px;
+
+    border-radius: 999px;
+
+    object-fit: cover;
+}
+
+.hero__mobile-image--offset {
+    margin-top: -56px;
+}
+
+.hero__mobile-header {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #FFCC81;
+}
+
+.hero__mobile-title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero__mobile-title-highlight {
+    display: inline;
+}
+
+.hero__mobile-subtitle {
+    margin-top: .25rem;
+
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.hero__mobile-curve {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+}
+
+.hero__mobile-schedule {
+    width: 100%;
+    margin-top: .25rem;
+    padding: 0 1rem;
+}
+
+.hero__venue,
+.hero__date {
+    color: #000E38;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.hero__location,
+.hero__time {
+    color: #000E38;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hero__divider {
+    width: 2px;
+    height: 40px;
+    background: rgba(63, 24, 106, 0.7);
+}
+
+.hero__mobile-schedule-card {
+    width: 100%;
+    height: 90px;
+
+    padding: 4px;
+
+    background: #FFCC81;
+    border-radius: 999px;
+}
+
+.hero__mobile-schedule-inner {
+    width: 100%;
+    height: 100%;
+
+    border: 1px dashed rgba(63, 24, 106, .7);
+    border-radius: 999px;
+}
+
+.hero__mobile-schedule-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile - hero images auto scroll */
+.mobile-gallery {
+    overflow: hidden;
+    width: 100%;
+    padding: 80px 1rem 0;
+}
+
+.mobile-gallery-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    animation: scrollLeft 30s linear infinite;
+    will-change: transform;
+}
+
+.mobile-gallery:hover .mobile-gallery-track {
+    animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
