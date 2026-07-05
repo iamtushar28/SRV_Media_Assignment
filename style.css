@@ -765,171 +765,161 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(6, 21, 50, 0.2) 
     }
 }
 
-/*==================================
-    School Categories
-==================================*/
+/*==============================
+    Learning Hub
+==============================*/
 
-.school-categories {
-    width: 100%;
-    padding: 60px 0;
+.learning-hub{
+    width:100%;
+    padding:60px 0;
 }
 
-.school-categories__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+.learning-hub__wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:40px;
 }
 
-.school-categories__header {
-    padding: 0 1rem;
+.learning-hub__header{
+    padding:0 1rem;
 }
 
-.school-categories__title {
-    margin: 0;
-
-    text-align: center;
-    color: #000E38;
-
-    font-size: 26px;
-    font-weight: 600;
+.learning-hub__heading{
+    margin:0;
+    text-align:center;
+    color:#000E38;
+    font-size:26px;
+    font-weight:600;
 }
 
-.school-categories__list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
+.learning-hub__track{
+    display:flex;
+    gap:1rem;
+    width:100%;
+    padding:0 1rem;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scroll-snap-type:x mandatory;
 
-    width: 100%;
-
-    padding: 0 1rem;
-
-    overflow-x: auto;
-
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
 }
 
-.school-categories__list::-webkit-scrollbar {
-    display: none;
+.learning-hub__track::-webkit-scrollbar{
+    display:none;
 }
 
-.school-categories__card {
-    position: relative;
-
-    flex-shrink: 0;
-
-    width: 100%;
-    max-width: 420px;
-    height: 405px;
-
-    border-radius: 16px;
-
-    overflow: hidden;
+.learning-hub__item{
+    position:relative;
+    flex:0 0 100%;
+    max-width:420px;
+    height:405px;
+    border-radius:16px;
+    overflow:hidden;
+    scroll-snap-align:center;
 }
 
-.school-categories__image {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
+.learning-hub__image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
-.school-categories__overlay {
-    position: absolute;
-    inset: 0;
+.learning-hub__content{
+    position:absolute;
+    inset:0;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: .5rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    gap:.5rem;
 
-    padding: 1rem;
+    padding:1rem;
 
-    background: linear-gradient(
+    background:linear-gradient(
         to bottom,
-        rgba(0,0,0,.10),
-        rgba(0,0,0,.80)
+        rgba(0,0,0,.1),
+        rgba(0,0,0,.8)
     );
 }
 
-.school-categories__card-title {
-    margin: 0;
-
-    color: #ffffff;
-
-    font-size: 20px;
-    font-weight: 600;
+.learning-hub__title{
+    margin:0;
+    color:#fff;
+    font-size:20px;
+    font-weight:600;
 }
 
-.school-categories__description {
-    margin: 0;
-
-    color: #ffffff;
-
-    font-size: 18px;
-    line-height: 1.5;
+.learning-hub__text{
+    margin:0;
+    color:#fff;
+    font-size:18px;
+    line-height:1.5;
 }
 
-/* ==========================
-   Pagination
-========================== */
+/* Pagination */
 
-/* Mobile - pagination dots for school card */
-.schools-pagination {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-
-    margin-top: 24px;
+.learning-pagination{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    margin-top:24px;
 }
 
-.dot {
-    width: 12px;
-    height: 12px;
+.learning-pagination__dot{
+    width:8px;
+    height:8px;
+    border-radius:20px;
+    background:#d5d5d5;
 
-    border-radius: 50%;
-
-    background: #d4d4d4;
-
-    transition: background .3s ease,
-                transform .3s ease;
-
-    cursor: pointer;
+    transform-origin:center;
+    transition:
+        width .35s cubic-bezier(.4,0,.2,1),
+        background .3s;
 }
 
-.dot.active {
-    background: #3F186A;
-    transform: scale(1.2);
+.learning-pagination__dot.active{
+    width:30px;
+    background:#3F186A;
 }
 
-@media (min-width: 768px) {
+/* Tablet */
 
-    .schools-pagination {
-        display: none;
+@media(min-width:768px){
+
+    .learning-pagination{
+        display:none;
+    }
+
+    .learning-hub__track{
+        justify-content:flex-start;
+    }
+
+    .learning-hub__item{
+        flex:0 0 380px;
     }
 
 }
 
-/*==================================
-    Responsive
-==================================*/
+/* Desktop */
 
-@media (min-width:1024px) {
+@media(min-width:1024px){
 
-    .school-categories__title {
-        font-size: 48px;
+    .learning-hub__heading{
+        font-size:48px;
     }
 
 }
 
-@media (min-width:1536px) {
+/* Large Desktop */
 
-    .school-categories__list {
-        justify-content: center;
+@media(min-width:1536px){
+
+    .learning-hub__track{
+        justify-content:center;
     }
 
 }
@@ -973,7 +963,6 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(6, 21, 50, 0.2) 
     }
 
 }
-
 
 /*==================================
     Schools
@@ -1098,7 +1087,6 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(6, 21, 50, 0.2) 
     }
 
 }
-
 
 /* ===================================
    Appointment

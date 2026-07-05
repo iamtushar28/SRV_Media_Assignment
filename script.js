@@ -58,19 +58,68 @@ const slider = document.getElementById("featuresSlider");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
 
-// Card width + gap
-const scrollAmount = 417 + 24;
+function getScrollAmount() {
+  const card = slider.querySelector(".features__card");
+
+  const cardWidth = card.offsetWidth;
+  const gap = parseFloat(
+    getComputedStyle(slider).columnGap || getComputedStyle(slider).gap,
+  );
+
+  return cardWidth + gap;
+}
 
 nextBtn.addEventListener("click", () => {
   slider.scrollBy({
-    left: scrollAmount,
+    left: getScrollAmount(),
     behavior: "smooth",
   });
 });
 
 prevBtn.addEventListener("click", () => {
   slider.scrollBy({
-    left: -scrollAmount,
+    left: -getScrollAmount(),
     behavior: "smooth",
+  });
+});
+
+// learningSlider indicator
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.getElementById("learningSlider");
+  const slides = [...slider.children];
+  const dots = [
+    ...document.querySelectorAll("#learningDots .learning-pagination__dot"),
+  ];
+
+  function updateDots(index) {
+    dots.forEach((dot) => dot.classList.remove("active"));
+
+    if (dots[index]) {
+      dots[index].classList.add("active");
+    }
+  }
+
+  function goToSlide(index) {
+    const slideWidth = slides[0].offsetWidth + 16;
+
+    slider.scrollTo({
+      left: slideWidth * index,
+      behavior: "smooth",
+    });
+
+    updateDots(index);
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      goToSlide(index);
+    });
+  });
+
+  slider.addEventListener("scroll", () => {
+    const slideWidth = slides[0].offsetWidth + 16;
+    const index = Math.round(slider.scrollLeft / slideWidth);
+
+    updateDots(index);
   });
 });
