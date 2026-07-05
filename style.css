@@ -1,4 +1,14 @@
 
+/* Hide scrollbar */
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE & Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
+}
+
 /* ==========================
    Header
 ========================== */
@@ -287,3 +297,48 @@
         transform: translateX(-50%);
     }
 }
+
+.enquiry-form-bg{
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(6, 21, 50, 0.2) 100%);
+
+}
+
+.wrapper{
+    height:900px; /* or h-full */
+    overflow:hidden;
+}
+
+.column{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    width:fit-content;
+    will-change:transform;
+}
+
+.scroll-fast{
+    animation:scrollUpFast 16s linear infinite;
+}
+
+.scroll-slow{
+    animation:scrollUpSlow 22s linear infinite;
+}
+
+@keyframes scrollUpFast{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-50%);
+    }
+}
+
+@keyframes scrollUpSlow{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-50%);
+    }
+}
+
