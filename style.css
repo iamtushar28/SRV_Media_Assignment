@@ -81,29 +81,25 @@ textarea {
     display: none;             /* Chrome, Safari, Opera */
 }
 
-/* Skip to Content Link - Keyboard Accessibility */
-.skip-to-content {
-  /* Absolute positioning takes it out of the normal layout flow */
-  position: absolute;
-  top: -100px; /* Hidden off-screen by default */
-  left: 20px;
-  background-color: #FFCC81; /* High contrast matching your brand color */
-  color: #000E38; /* Dark navy text for strict contrast requirements */
-  padding: 12px 24px;
-  font-weight: 700;
-  font-size: 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  z-index: 9999; /* Ensures it sits above any other layer when active */
-  transition: top 0.2s ease; /* Smooth slide-down effect when focused */
+/* ==========================
+   Skip Link
+========================== */
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    background: #000e38;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    transition: top 0.3s ease;
 }
 
-/* Brings the link into view when focused via Tab key */
-.skip-to-content:focus-visible,
-.skip-to-content:focus {
-  top: 20px; /* Slides down into view at the top of the viewport */
-  outline: 3px solid #3F186A; /* High contrast outline around the element */
-  outline-offset: 2px;
+.skip-link:focus {
+    top: 1rem;
 }
 
 /* ==========================
