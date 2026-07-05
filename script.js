@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
   col3.classList.add("scroll-fast");
 });
 
-// logo append
+// school logo zig zag
 function startMarquee(track, direction = "left", speed = 1) {
   function animate() {
     if (direction === "left") {
@@ -53,6 +53,7 @@ function startMarquee(track, direction = "left", speed = 1) {
 startMarquee(document.getElementById("row1"), "left", 1);
 startMarquee(document.getElementById("row2"), "right", 1);
 
+// features controls
 const slider = document.getElementById("featuresSlider");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
