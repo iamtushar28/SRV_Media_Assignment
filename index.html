@@ -54,117 +54,98 @@
 
     <main id="main-content">
         <!-- DESKTOP HERO SECTION -->
-        <section class="hero-section">
-            <div class="hero-section__container">
-
-                <header class="hero-section__header">
-                    <div class="hero-section__title-group">
-                        <h1 class="hero-section__subtitle-top">Discover Gurugram’s</h1>
-                        <strong class="hero-section__main-title">Top 30+ Schools</strong>
-                        <p class="hero-section__subtitle-bottom">All In One Place</p>
-                    </div>
-
-                    <div class="hero-section__venue-outer">
-                        <div class="hero-section__venue-inner">
-                            <div class="hero-section__venue-details">
-
-                                <div class="hero-section__venue-block">
-                                    <h2 class="hero-section__venue-title">Apparel House,</h2>
-                                    <p class="hero-section__venue-text">Sec 44, Gurugram</p>
-                                </div>
-
-                                <div class="hero-section__venue-divider"></div>
-
-                                <div class="hero-section__venue-block">
-                                    <h2 class="hero-section__venue-title">2-3 August 2025</h2>
-                                    <p class="hero-section__venue-text">Sat-Sun | 10AM - 6PM</p>
-                                </div>
-
+        <section class="hero">
+            <div class="hero__grid purple-gradient-bg hide-on-mobile">
+                <div class="school-banner">
+                    <h1 class="school-banner__title">
+                        Discover Gurugram's<br>
+                        <span class="school-banner__title--highlight">Top 30+ Schools</span>
+                    </h1>
+                    <p class="school-banner__subtitle">ALL IN ONE PLACE</p>
+                    <div class="event-capsule">
+                        <div class="event-capsule-inner">
+                            <div class="event-capsule__section event-capsule__section--venue">
+                                <span class="event-capsule__primary-text">Apparel House,</span>
+                                <span class="event-capsule__secondary-text">Sec 44, Gurugram</span>
+                            </div>
+                            <div class="event-capsule__divider"></div>
+                            <div class="event-capsule__section event-capsule__section--schedule">
+                                <span class="event-capsule__primary-text">2-3 August 2025</span>
+                                <span class="event-capsule__secondary-text">Sat-Sun | 10AM - 6PM</span>
                             </div>
                         </div>
                     </div>
-                </header>
-
-                <div class="hero-section__visuals hide-scrollbar">
-
-                    <div class="wrapper">
-                        <div id="col1" class="column hero-section__gallery-col">
-                            <img src="./images/childrens/children1.webp"
-                                alt="School children participating in classroom activities"
-                                class="hero-section__gallery-img">
-                            <img src="./images/childrens/children4.webp" alt="Smiling elementary student at desk"
-                                class="hero-section__gallery-img">
-                            <img src="./images/childrens/children7.webp"
-                                alt="Group of students working on group project" class="hero-section__gallery-img">
-                            <img src="./images/childrens/children10.webp"
-                                alt="High school student working in chemistry lab" class="hero-section__gallery-img">
-                        </div>
-                    </div>
-
-                    <div class="wrapper">
-                        <div id="col2" class="column hero-section__gallery-col">
-                            <img src="./images/childrens/children2.webp" alt="Students engaged in reading books"
-                                class="hero-section__gallery-img">
-                            <img src="./images/childrens/children5.webp"
-                                alt="Children laughing outdoors on school field" class="hero-section__gallery-img">
-                            <img src="./images/childrens/children8.webp" alt="Art class with young kids painting"
-                                class="hero-section__gallery-img">
-                            <img src="./images/childrens/children11.webp"
-                                alt="Kids playing sports in the indoor gymnasium" class="hero-section__gallery-img">
-                        </div>
-                    </div>
-
-                    <div class="wrapper">
-                        <div id="col3" class="column hero-section__gallery-col">
-                            <img src="./images/childrens/children3.webp"
-                                alt="Primary students using tablet for e-learning" class="hero-section__gallery-img">
-                            <img src="./images/childrens/children6.webp"
-                                alt="Music room setup with children playing instruments"
-                                class="hero-section__gallery-img">
-                            <img src="./images/childrens/children9.webp" alt="Graduation day celebration setup"
-                                class="hero-section__gallery-img">
-                            <img src="./images/childrens/children12.webp"
-                                alt="Teacher interacting directly with students" class="hero-section__gallery-img">
-                        </div>
-                    </div>
-
                 </div>
-
-                <div class="hero-section__form-container enquiry-form-bg">
-                    <h3 class="hero-section__form-title">Enquire Now</h3>
-
-                    <form class="hero-section__form">
-                        <div class="hero-section__form-fields">
-
-                            <label for="parent-name" class="sr-only">Parent's Name</label>
-                            <input type="text" name="name" id="parent-name" placeholder="Parent's Name"
-                                class="hero-section__input" required>
-
-                            <label for="phone-number" class="sr-only">Phone Number</label>
-                            <input type="tel" name="phone" id="phone-number" placeholder="Phone Number"
-                                class="hero-section__input" required>
-
-                            <label for="grade-looking" class="sr-only">Which grade are you looking for?</label>
-                            <textarea id="grade-looking" name="grade" placeholder="Which grade are you looking for?"
-                                class="hero-section__textarea" required></textarea>
-
+                <div class="scroll-window">
+                    <div class="scroll-track">
+                        <div class="scroll-item">
+                            <img src="./images/childrens/children1.webp" alt="A1">
+                            <img src="./images/childrens/children2.webp" alt="A1">
+                            <img src="./images/childrens/children3.webp" alt="A1">
                         </div>
-
-                        <button type="submit" class="hero-section__submit-btn" aria-label="Submit enquiry details">
-                            <div class="hero-section__submit-icon-wrapper" aria-hidden="true">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                    class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                        <div class="scroll-item">
+                            <img src="./images/childrens/children4.webp" alt="A1"><img
+                                src="./images/childrens/children5.webp" alt="A1"><img
+                                src="./images/childrens/children6.webp" alt="A1">
+                        </div>
+                        <div class="scroll-item">
+                            <img src="./images/childrens/children7.webp" alt="A1"><img
+                                src="./images/childrens/children8.webp" alt="A1"><img
+                                src="./images/childrens/children9.webp" alt="A1">
+                        </div>
+                        <div class="scroll-item">
+                            <img src="./images/childrens/children10.webp" alt="A1"><img
+                                src="./images/childrens/children11.webp" alt="A1"><img
+                                src="./images/childrens/children12.webp" alt="A1">
+                        </div>
+                        <!-- Duplicate -->
+                        <div class="scroll-item">
+                            <img src="./images/childrens/children1.webp" alt="A1">
+                            <img src="./images/childrens/children2.webp" alt="A1">
+                            <img src="./images/childrens/children3.webp" alt="A1">
+                        </div>
+                        <div class="scroll-item">
+                            <img src="./images/childrens/children4.webp" alt="A1"><img
+                                src="./images/childrens/children5.webp" alt="A1"><img
+                                src="./images/childrens/children6.webp" alt="A1">
+                        </div>
+                        <div class="scroll-item">
+                            <img src="./images/childrens/children7.webp" alt="A1"><img
+                                src="./images/childrens/children8.webp" alt="A1"><img
+                                src="./images/childrens/children9.webp" alt="A1">
+                        </div>
+                        <div class="scroll-item">
+                            <img src="./images/childrens/children10.webp" alt="A1"><img
+                                src="./images/childrens/children11.webp" alt="A1"><img
+                                src="./images/childrens/children12.webp" alt="A1">
+                        </div>
+                    </div>
+                </div>
+                <div class="enquiry-card">
+                    <h2 class="enquiry-card__title">Enquire Now</h2>
+                    <form class="enquiry-form">
+                        <div class="enquiry-form__group">
+                            <input type="text" class="enquiry-form__input" placeholder="Parent's Name" required>
+                        </div>
+                        <div class="enquiry-form__group">
+                            <input type="tel" class="enquiry-form__input" placeholder="Phone number" required>
+                        </div>
+                        <div class="enquiry-form__group">
+                            <textarea class="enquiry-form__textarea" placeholder="Which grade are you looking for?"
+                                rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="enquiry-form__submit-btn">
+                            <span class="enquiry-form__icon-wrapper">
+                                <svg class="enquiry-form__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
                                 </svg>
-                            </div>
-                            <div class="hero-section__submit-text-wrapper">
-                                <span class="hero-section__submit-text">SUBMIT</span>
-                            </div>
+                            </span>
+                            <span class="enquiry-form__btn-text">SUBMIT</span>
                         </button>
                     </form>
                 </div>
-
             </div>
         </section>
         <!-- END DESKTOP HERO SECTION -->
@@ -285,19 +266,16 @@
         </section>
         <!-- END MOBILE HERO SECTION -->
 
-        <!-- AWARDS -->
+        <!-- Awards Section -->
         <section class="awards" aria-labelledby="awards-heading">
-            <picture class="awards__picture">
+            <h2 id="awards-heading" class="visually-hidden">Awards</h2>
 
-                <source media="(min-width: 1024px)" srcset="./images/common/desktop-features.webp">
+            <!-- Desktop Image -->
+            <img src="./images/common/desktop-features.webp" alt="Awards" class="awards__image awards__image--desktop">
 
-                <img src="./images/common/mobile-features.webp" alt="Awards and exhibition highlights"
-                    class="awards__image">
-
-            </picture>
-
+            <!-- Mobile Image -->
+            <img src="./images/common/mobile-features.webp" alt="Awards" class="awards__image awards__image--mobile">
         </section>
-        <!-- END AWARDS -->
 
         <!-- SCHOOL LOGOS -->
         <section class="schools" aria-labelledby="schools-heading">
